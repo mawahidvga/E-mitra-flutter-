@@ -25,6 +25,7 @@ class _TestApiState extends State<TestApi> {
     //      fontSize: 16.0,
     //
     //  );
+
      super.initState();
    }
 
@@ -43,7 +44,16 @@ class _TestApiState extends State<TestApi> {
                return ListView.builder(
                    itemCount: snapshot.data.articles.length,
                    itemBuilder: (context, index) {
-                     var article=snapshot.data.articles[index];
+
+                   if(index==0){
+                     return Container(
+                       height: 100,
+                       margin: EdgeInsets.all(10),
+                       child: Text("header") ,
+                     );
+
+                   }
+               var article=snapshot.data.articles[index-1];
                  return Container(
                    height: 100,
                    margin: EdgeInsets.all(10),
@@ -68,7 +78,7 @@ class _TestApiState extends State<TestApi> {
                        child:  Column(
                          crossAxisAlignment: CrossAxisAlignment.start,
                          children: <Widget>[
-                           Text(article.title,overflow: TextOverflow.ellipsis,
+                           Text(index.toString()+""+article.title,overflow: TextOverflow.ellipsis,
                            textAlign: TextAlign.start,
                            style: TextStyle(
                              fontWeight: FontWeight.bold

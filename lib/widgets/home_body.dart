@@ -159,7 +159,7 @@ class _HomeBodyState extends State<HomeBody> {
         SizedBox(height: 10),
         /////  Services list
 
-        serviceCard123(),
+        serviceCard(),
 
         // Column(
         //   children: <Widget> [
@@ -310,9 +310,9 @@ class _HomeBodyState extends State<HomeBody> {
         ).toList());
   }
 
-  Widget serviceCard123() {
+  Widget serviceCard() {
     return Column(
-        children: homeSer.map<Widget>((document) {
+        children:homeSer.map<Widget>((document) {
           return new   Container (
             margin: EdgeInsets.only(left: 30,top: 0,right: 30,bottom: 10),
             padding: EdgeInsets.only(left: 30,top:30,right: 30,bottom: 10),
@@ -434,6 +434,9 @@ class _HomeBodyState extends State<HomeBody> {
         }
         ).toList());
   }
+
+
+
 }
 
 
