@@ -159,7 +159,7 @@ class _HomeBodyState extends State<HomeBody> {
         SizedBox(height: 10),
         /////  Services list
 
-        serviceCard(),
+        serviceCard123(),
 
         // Column(
         //   children: <Widget> [
@@ -310,7 +310,7 @@ class _HomeBodyState extends State<HomeBody> {
         ).toList());
   }
 
-  Widget serviceCard() {
+  Widget serviceCard123() {
     return Column(
         children: homeSer.map<Widget>((document) {
           return new   Container (
